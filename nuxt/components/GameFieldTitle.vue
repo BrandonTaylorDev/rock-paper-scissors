@@ -8,5 +8,12 @@
   h1 {
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212121;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    h1 {
+      color: #EFEFEF;
+    }
   }
 </style>

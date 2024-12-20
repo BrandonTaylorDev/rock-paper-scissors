@@ -26,25 +26,44 @@
 </script>
 
 <template>
-  <div v-if="props.playerChoice !== null">
+   <div v-if="props.playerChoice !== null" class="result">
     <div>
-      Computer Chose: {{ props.computerChoice }}.
+      <div>
+        Computer Chose: {{ props.computerChoice }}.
+      </div>
+
+      <span v-if="result === 0">
+        You win!
+      </span>
+
+      <span v-else-if="result === 1">
+        You lose!
+      </span>
+
+      <span v-else-if="result === 2">
+        Draw!
+      </span>
     </div>
 
-    <span v-if="result === 0">
-      You win!
-    </span>
-
-    <span v-else-if="result === 1">
-      You lose!
-    </span>
-
-    <span v-else-if="result === 2">
-      Draw!
-    </span>
-
-    <button @click="emit('resetGame')">
-      Play again?
-    </button>
+    <div>
+      <button @click="emit('resetGame')">
+        Play again?
+      </button>
+    </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+  .result {
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    .result {
+      color: #EFEFEF;
+    }
+  }
+</style>

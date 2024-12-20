@@ -35,7 +35,7 @@
 
   .choice:hover {
     background-color: #656565;
-    border: none;
+    border: 1px solid #656565;
     color: #EFEFEF;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -45,6 +45,7 @@
   @media screen and (prefers-color-scheme: dark) {
     .choice {
       color: #EFEFEF;
+      border: 1px solid #EFEFEF;
     }
   }
 </style>
