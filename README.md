@@ -16,3 +16,6 @@ For now, here is the list:
 - [x] Rust
 - [ ] PHP
 - [ ] Shell
+
+## What about this "Nuxt" folder?
+I also wanted to include an example of this game in a User Interface. I may add more frameworks later, such as React or Svelte, but Nuxt is my go-to for now.
